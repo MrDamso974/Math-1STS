@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Intégrales — BTS | Cours, exercices, quiz</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <meta name="description" content="Cours d’intégration pour BTS : primitives, intégrales définies, techniques, applications, exercices corrigés et quiz."/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">∫</div>
+      <div>
+        <div class="title">Intégrales — BTS</div>
+        <div class="subtitle">Cours • Exemples • Exercices • Quiz</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-btn active" data-route="dashboard">Accueil</button>
+      <button class="nav-btn" data-route="lessons">Leçons</button>
+      <button class="nav-btn" data-route="examples">Exemples</button>
+      <button class="nav-btn" data-route="exercises">Exercices</button>
+      <button class="nav-btn" data-route="quiz">Quiz</button>
+      <button class="nav-btn" data-route="progress">Progression</button>
+    </nav>
+
+    <div class="actions">
+      <button class="ghost" id="btnTheme" title="Changer le thème">Thème</button>
+      <button class="danger" id="btnReset" title="Réinitialiser la progression">Reset</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="card">
+        <div class="card-header">
+          <h3>Plan BTS — Intégration</h3>
+          <p>Tout ce qu’il faut : méthodes + applications.</p>
+        </div>
+        <div class="pill-list" id="pillList"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Conseil rapide</h3>
+          <p id="tipText"></p>
+        </div>
+        <div class="mini-actions">
+          <button class="ghost" id="btnNewTip">Nouveau conseil</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Raccourcis</h3>
+          <p>Aller vite aux évaluations.</p>
+        </div>
+        <div class="mini-actions">
+          <button class="primary" data-route-jump="quiz">Faire un quiz</button>
+          <button class="ghost" data-route-jump="exercises">Faire un exercice</button>
+        </div>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div id="view"></div>
+
+      <footer class="footer">
+        <div>© <span id="year"></span> Intégrales — BTS</div>
+        <div class="muted">Sauvegarde locale automatique (dans ton navigateur).</div>
+      </footer>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
